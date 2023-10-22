@@ -20,14 +20,14 @@ npm i
 
 ## Usage
 
-1. Run the following command to migrate your Prisma database schema:
+# 1.Run the following command to migrate your Prisma database schema:
 
 npm run prisma:migrate "any name"
 
-2. Run the following command to prepare your project for husky:
+# 2.Run the following command to prepare your project for husky:
 
 npm run prepare
 
-3. Run the following command to install the Husky commit hook:
+# 3.Run the following command to install the Husky commit hook:
 
 npx husky add .husky/commit-msg "npx --no -- commitlint --edit $1"

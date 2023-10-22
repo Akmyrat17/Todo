@@ -84,6 +84,11 @@ const apiDocumentation = {
         },
         '/api/users': {
             post: {
+                security: [
+                    {
+                        bearerAuth: [],
+                    },
+                ],
                 tags: ['Users'],
                 description: 'Create a new user',
                 operationId: 'createUser',
@@ -130,6 +135,11 @@ const apiDocumentation = {
                 },
             },
             get: {
+                security: [
+                    {
+                        bearerAuth: [],
+                    },
+                ],
                 tags: ['Users'],
                 description: 'Get all users',
                 operationId: 'getAllUsers',
@@ -152,6 +162,11 @@ const apiDocumentation = {
         },
         '/api/users/{id}': {
             put: {
+                security: [
+                    {
+                        bearerAuth: [],
+                    },
+                ],
                 path: '/api/users/{id}',
                 tags: ['Users'],
                 parameters: [
@@ -182,6 +197,11 @@ const apiDocumentation = {
                 },
             },
             delete: {
+                security: [
+                    {
+                        bearerAuth: [],
+                    },
+                ],
                 tags: ['Users'],
                 parameters: [
                     { name: 'id', in: 'path', description: 'id of user', required: true },
@@ -204,6 +224,11 @@ const apiDocumentation = {
         },
         '/api/todo': {
             get: {
+                security: [
+                    {
+                        bearerAuth: [],
+                    },
+                ],
                 tags: ['Todos'],
                 description: 'Get all todos',
                 operationId: 'getAllTodos',
@@ -227,6 +252,11 @@ const apiDocumentation = {
                 },
             },
             post: {
+                security: [
+                    {
+                        bearerAuth: [],
+                    },
+                ],
                 tags: ['Todos'],
                 description: 'Create a new todo',
                 operationId: 'createTodo',
@@ -263,6 +293,11 @@ const apiDocumentation = {
         },
         '/api/todo/{id}': {
             put: {
+                security: [
+                    {
+                        bearerAuth: [],
+                    },
+                ],
                 tags: ['Todos'],
                 parameters: [
                     { name: 'id', in: 'path', description: 'id of todo', required: true },
@@ -300,6 +335,11 @@ const apiDocumentation = {
                 },
             },
             delete: {
+                security: [
+                    {
+                        bearerAuth: [],
+                    },
+                ],
                 tags: ['Todos'],
                 parameters: [
                     { name: 'id', in: 'path', description: 'id of todo', required: true },
@@ -324,6 +364,11 @@ const apiDocumentation = {
                 },
             },
             get: {
+                security: [
+                    {
+                        bearerAuth: [],
+                    },
+                ],
                 tags: ['Todos'],
                 parameters: [
                     { name: 'id', in: 'path', description: 'id of todo', required: true },
@@ -350,6 +395,13 @@ const apiDocumentation = {
         },
     },
     components: {
+        securitySchemes: {
+            bearerAuth: {
+                type: 'http',
+                scheme: 'bearer',
+                bearerFormat: 'JWT',
+            },
+        },
         schemas: {
             UsersSchema: {
                 type: 'object',

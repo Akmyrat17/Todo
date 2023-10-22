@@ -22,12 +22,18 @@ npm i
 
 # 1. Run the following command to migrate your Prisma database schema:
 
+```sh
 npm run prisma:migrate "any name"
+```
 
 # 2.Run the following command to prepare your project for husky:
 
+```sh
 npm run prepare
+```
 
 # 3.Run the following command to install the Husky commit hook:
 
+```sh
 npx husky add .husky/commit-msg "npx --no -- commitlint --edit $1"
+```

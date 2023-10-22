@@ -20,7 +20,7 @@ npm i
 
 ## Usage
 
-1. Run the following command to migrate your Prisma database schema:
+# Run the following command to migrate your Prisma database schema:
 
 npm run prisma:migrate "any name"
 
